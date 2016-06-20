@@ -1,6 +1,7 @@
 package QuickSort;
 
 public class QuickSort {
+	
 	public int[] a;
 	public QuickSort(int[] a) {
 		this.a = a;
@@ -54,8 +55,9 @@ public class QuickSort {
 	}
 	
 	public void printSort(){
+		System.out.print("Sort ASC: ");
 		for (int i : a) {
-			System.out.println(" "+i);
+			System.out.print(" "+i);
 		}
 	}
 	

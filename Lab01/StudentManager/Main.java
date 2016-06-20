@@ -4,10 +4,11 @@ import java.util.Scanner;
 
 public class Main {
 
+	private static Scanner input;
+
 	public static void main(String[] args) {
-		
 	
-		Scanner input = new Scanner(System.in);
+		input = new Scanner(System.in);
 		int choose = 0;
 		
 		do{
@@ -34,8 +35,9 @@ public class Main {
 			
 			case 3: StudentManager.printStudent1();	
 				break;
-			case 4: StudentManager.printClass();	
 				
+			case 4: StudentManager.printClass();	
+				break;
 				
 			}
 			

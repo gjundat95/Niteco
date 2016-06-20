@@ -1,8 +1,6 @@
 package FileIO;
 
 
-import java.io.IOException;
-
 public class Main {
 	
 	static String url = "/home/jundat95/laptrinh/exam.txt";
@@ -13,7 +11,7 @@ public class Main {
 		FileIO fi = new FileIO(url);
 		fi.writeDouble(data);
 		fi.readDouble();
-		System.out.println("\nSum2 Double: "+fi.sum2Double());
+		System.out.println("\nSum2 Double: "+fi.squaredDouble());
 		
 	}
 

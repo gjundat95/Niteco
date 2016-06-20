@@ -11,7 +11,6 @@ import java.io.IOException;
 public class FileIO {
 	
 	private String url;
-	private double[] a;
 	private File file;
 	private FileInputStream fis;
 	private FileOutputStream fos;
@@ -72,10 +71,10 @@ public class FileIO {
 		}
 	}
 	/**
-	 * Read double and sum2 double
+	 * Read double and squared number 
 	 * @return double Calculate sum of square of each number 
 	 */
-	public double sum2Double(){
+	public double squaredDouble(){
 		double d = 0;
 		checkURL();
 		try {

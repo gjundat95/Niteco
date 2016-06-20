@@ -25,6 +25,9 @@ public class MySqlHelper {
 	String user = "root";
 	String pass = "";
 	
+	/**
+	 *  Construct, create Connection in MySql
+	 */
 	public MySqlHelper(){
 		
 		try {
@@ -42,6 +45,10 @@ public class MySqlHelper {
 		}
 	}
 	
+	/**
+	 * Add one student to table student
+	 * @param st 						Student 
+	 */
 	public void addStudentInfor(Student st){
 		
 		String query = "Insert Into Student "+"(name,age,idclass)" + "Values"+"(?,?,?)";
@@ -63,6 +70,11 @@ public class MySqlHelper {
 		}
 	}
 	
+	/**
+	 * Update Mark for Student
+	 * @param st 					Student
+	 * @param nameTable 			Table Name
+	 */
 	public void updateStudentMark(Student st,String nameTable){
 		
 		String query = "Insert Into "+nameTable+"(testmark,exmark,summark,idsudent)" + "Values(?,?,?,?)";
@@ -83,6 +95,12 @@ public class MySqlHelper {
 		}
 	}
 	
+	/**
+	 * Print once Student
+	 * @param id 				Id Student
+	 * @param nameTable 		Table name
+	 * @return ResultSet 
+	 */
 	public ResultSet printStudent1(int id, String nameTable){
 		ResultSet rs = null;
 		String query = "Select * From "+nameTable+" Where id = ?";
@@ -96,7 +114,11 @@ public class MySqlHelper {
 		}
 		return rs;
 	}
-	
+	/**
+	 * Print Student
+	 * @param nameTable				Table Name
+	 * @return	ResultSet
+	 */
 	public ResultSet printStudent(String nameTable){
 		ResultSet rs = null;
 		String query = "Select * From "+nameTable;
@@ -109,6 +131,11 @@ public class MySqlHelper {
 		return rs;
 	}
 	
+	/**
+	 * Print Class
+	 * @param id 					Id Class
+	 * @return ResultSet
+	 */
 	public ResultSet printClass(int id){
 		ResultSet rs = null;
 		String query = "Select Student.* From Class,Student "+"Where Student.idclass = Class.id " + "and Class.id = ?";

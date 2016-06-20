@@ -10,7 +10,9 @@ public class StudentManager {
 	static Scanner input = new Scanner(System.in);
 	
 	
-	
+	/**
+	 * Add Information Student
+	 */
 	public static void addStudentInfo(){
 		String choose = null;
 		do{
@@ -33,6 +35,9 @@ public class StudentManager {
 		}while(true);
 	}
 	
+	/**
+	 * Add mark Student
+	 */
 	public static void updateStudentMark(){
 		ResultSet rs = null;
 		rs = helper.printStudent(MySqlHelper.Student);
@@ -75,6 +80,11 @@ public class StudentManager {
 		}
 	}
 	
+	/**
+	 * Auto input to Mark
+	 * @param i 					Subject
+	 * @param st 					Sdtudent 
+	 */
 	public static void autoMark(int i,Student st){
 		if(i == 0){
 			helper.updateStudentMark(st, MySqlHelper.Math);
@@ -87,6 +97,9 @@ public class StudentManager {
 		}
 	}
 	
+	/**
+	 * Print once student
+	 */
 	public static void printStudent1(){
 		ResultSet rs = null;
 		
@@ -106,6 +119,9 @@ public class StudentManager {
 		}
 	}
 	
+	/**
+	 * Print class
+	 */
 	public static void printClass(){
 		
 		ResultSet rs = null;
