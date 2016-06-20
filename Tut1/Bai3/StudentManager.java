@@ -1,6 +1,8 @@
 package Bai3;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class StudentManager {
@@ -24,8 +26,6 @@ public class StudentManager {
 			listST.add(st);
 		}
 	}
-	
-
 	
 	public void inputMark(){
 		System.out.println("-----------------------------------------------------");
@@ -58,6 +58,19 @@ public class StudentManager {
 				}
 			}
 		}
+	}
+	
+	public void sortStudent(int n){
+		// Sap xep theo diem n = 1
+		Collections.sort(listST,new Comparator<Student>() {
+
+			@Override
+			public int compare(Student o1, Student o2) {
+				int values = o1.sum - o2.sum;
+				return values;
+			}
+			
+		});
 	}
 	
 	public void printStudent1(){

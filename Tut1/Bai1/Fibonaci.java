@@ -14,10 +14,11 @@ public class Fibonaci {
 	public void tinhFibo(int n){
 		int i = 1;
 		while(true){
-			if(fibo(i) >= n) break;
+			if(fibo(i) > n) break;
 			System.out.print(fibo(i)+" ");
 			sum += fibo(i);
 			i++;
 		}
+		
 	}
 }
