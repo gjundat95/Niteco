@@ -36,6 +36,29 @@ public class QuickSort {
 			quickSort(index, right);
 	}
 	
+	public int count(int number){
+		int dem = 0;
+		for(int i = 0; i < a.length; i++){
+			if(a[i] == number){
+				dem++;
+			}
+				
+		}
+		return dem;
+	}
+	
+	public int maxCount(){
+		int count = count(a[0]);
+		int number = 0;
+		for(int i = 0; i < a.length; i++){
+			if(count < count(a[i])){
+				count = count(a[i]);
+				number = a[i];
+			}
+		}
+		return number;
+	}
+	
 	public int findMin(){
 		int min = a[0];
 		for (int i : a) {

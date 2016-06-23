@@ -10,9 +10,7 @@ public class StudentManager {
 	static Scanner input = new Scanner(System.in);
 	
 	
-	/**
-	 * Add Information Student
-	 */
+
 	public static void addStudentInfo(){
 		String choose = null;
 		do{
@@ -29,15 +27,12 @@ public class StudentManager {
 			st.age = Integer.parseInt(input.nextLine());
 			System.out.println("Nhap ma lop: ");
 			st.idclass = Integer.parseInt(input.nextLine());
-			
 			helper.addStudentInfor(st);
 			
 		}while(true);
 	}
 	
-	/**
-	 * Add mark Student
-	 */
+
 	public static void updateStudentMark(){
 		ResultSet rs = null;
 		rs = helper.printStudent(MySqlHelper.Student);
@@ -97,10 +92,8 @@ public class StudentManager {
 		}
 	}
 	
-	/**
-	 * Print once student
-	 */
-	public static void printStudent1(){
+
+	public static void printOnceStudent(){
 		ResultSet rs = null;
 		
 		System.out.println("Enter id Student: ");
@@ -119,9 +112,7 @@ public class StudentManager {
 		}
 	}
 	
-	/**
-	 * Print class
-	 */
+
 	public static void printClass(){
 		
 		ResultSet rs = null;
@@ -139,6 +130,15 @@ public class StudentManager {
 			e.printStackTrace();
 			System.out.println("Fail ID Student.");
 		}
+	}
+	
+	public static boolean tryParseInt(String value) {  
+	     try {  
+	         Integer.parseInt(value);  
+	         return true;  
+	      } catch (NumberFormatException e) {  
+	         return false;  
+	      }  
 	}
 	
 }

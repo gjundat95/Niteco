@@ -33,7 +33,7 @@ public class Main {
 			case 2: StudentManager.updateStudentMark();
 				break;
 			
-			case 3: StudentManager.printStudent1();	
+			case 3: StudentManager.printOnceStudent();
 				break;
 				
 			case 4: StudentManager.printClass();	
