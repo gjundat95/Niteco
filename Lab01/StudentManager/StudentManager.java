@@ -98,7 +98,7 @@ public class StudentManager {
 		
 		System.out.println("Enter id Student: ");
 		int id = Integer.parseInt(input.nextLine());
-		rs = helper.printStudent1(id, MySqlHelper.Student);
+		rs = helper.printOnceStudent(id, MySqlHelper.Student);
 		System.out.println("----------------------------------------------------------------------");
 		System.out.println("Iformation Student------------------------------------------------");
 		try {

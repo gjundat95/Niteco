@@ -101,7 +101,7 @@ public class MySqlHelper {
 	 * @param nameTable 		Table name
 	 * @return ResultSet 
 	 */
-	public ResultSet printStudent1(int id, String nameTable){
+	public ResultSet printOnceStudent(int id, String nameTable){
 		ResultSet rs = null;
 		String query = "Select * From "+nameTable+" Where id = ?";
 		try {
