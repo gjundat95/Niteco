@@ -13,10 +13,10 @@ import com.mysql.jdbc.Statement;
 public class MySqlHelper {
 
 	//Const
-	public static String Student = "Student";
-	public static String Physics = "Physics";
-	public static String Math = "Math";
-	public static String Chemistry = "Chemistry";
+	public static final String Student = "Student";
+	public static final String Physics = "Physics";
+	public static final String Math = "Math";
+	public static final String Chemistry = "Chemistry";
 	
 	Connection conn = null;
 	String db = "StudentManager";
